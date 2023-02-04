@@ -28,6 +28,7 @@
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
-    "strictTemplates": true
+    "strictTemplates": true,
+    "noPropertyAccessFromIndexSignature": false, // allow using dot to access property of an object instead of using an index
   }
 }

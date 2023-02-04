@@ -1,1 +1,127 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&amp;display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&amp;display=swap');
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
+* {
+    margin    : 0;
+    padding   : 0;
+    box-sizing: border-box;
+    font-size : 16px !important;
+}
+
+body {
+    background-color: #fff;
+    color           : #22100D;
+    font-family     : 'Inter', sans-serif;
+    height          : 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color      : #22100D;
+    font-weight: 500;
+}
+
+a {
+    color          : #22100D;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #F66962;
+}
+
+a:hover,
+a:active,
+a:focus {
+    outline        : none;
+    text-decoration: none;
+}
+
+input {
+    border       : 2px solid #f9b3a3;
+    border-radius: 5px !important;
+    color        : #26292c !important;
+    font-size    : 14px !important;
+    padding      : 6px 50px 6px 15px !important;
+}
+
+input:focus,
+input:hover {
+    border    : 2px solid #f9613f;
+    outline   : none !important;
+    box-shadow: none !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+}
+
+input,
+button,
+a {
+    transition        : all 0.4s ease;
+    -moz-transition   : all 0.4s ease;
+    -o-transition     : all 0.4s ease;
+    -ms-transition    : all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+}
+
+button:focus {
+    outline: 0;
+}
+
+input[type=text],
+input[type=password] {
+    -webkit-appearance: none;
+    -moz-appearance   : none;
+    appearance        : none;
+}
+
+.btn {
+    display        : inline-block;
+    font-size      : 16px;
+    line-height    : 1.5;
+    text-align     : center;
+    text-decoration: none;
+    vertical-align : middle;
+    user-select    : none;
+    text-transform : none;
+    transition     : color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.style-btn {
+    background   : #FF875A;
+    border-radius: 5px;
+    padding      : 12px 15px;
+    font-weight  : 700;
+    color        : #FFF;
+}
+
+.btn:hover {
+    background: #f57b4d;
+    color     : #FFF;
+}
+
+.btn.focus,
+.btn:focus {
+    box-shadow: inherit;
+}
+
+label {
+    display      : inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group {
+    margin: 0 0 15px 0;
+}

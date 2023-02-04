@@ -1,0 +1,10 @@
+<div *ngIf="control.touched || control.dirty">
+    <p *ngIf="control.errors?.required">{{ label }} không được bỏ trống</p>
+    <p *ngIf="label != 'Password' && control.errors?.minlength">{{ label }} phải có ít nhất {{
+        control.errors?.minlength.requiredLength }} ký tự.</p>
+    <p *ngIf="control.errors?.maxlength">{{ label }} không được nhiều hơn {{ control.errors?.maxlength.requiredLength }}
+        ký tự.</p>
+    <p *ngIf="label != 'Password' && control.errors?.pattern">{{ label }} không đúng định dạng.</p>
+    <p *ngIf="label == 'Password' && control.errors?.pattern">{{ label }} phải có ít nhất 6 ký tự, 1 chữ hoa, 1 chữ
+        thường và 1 ký tự đặc biệt.</p>
+</div>
