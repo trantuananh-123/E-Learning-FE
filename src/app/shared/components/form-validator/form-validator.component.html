@@ -1,10 +1,16 @@
-<div *ngIf="control.touched || control.dirty">
-    <p *ngIf="control.errors?.required">{{ label }} không được bỏ trống</p>
-    <p *ngIf="label != 'Password' && control.errors?.minlength">{{ label }} phải có ít nhất {{
-        control.errors?.minlength.requiredLength }} ký tự.</p>
-    <p *ngIf="control.errors?.maxlength">{{ label }} không được nhiều hơn {{ control.errors?.maxlength.requiredLength }}
-        ký tự.</p>
-    <p *ngIf="label != 'Password' && control.errors?.pattern">{{ label }} không đúng định dạng.</p>
-    <p *ngIf="label == 'Password' && control.errors?.pattern">{{ label }} phải có ít nhất 6 ký tự, 1 chữ hoa, 1 chữ
-        thường và 1 ký tự đặc biệt.</p>
+<div *ngIf="control?.touched || control?.dirty || submitted">
+    <p *ngIf="control.errors?.required && inCorrectUser == null">{{ label }} is required</p>
+    <p *ngIf="(label != 'Password' && label != 'Username') && control.errors?.minlength">{{ label }} must have at least
+        {{ control.errors?.minlength.requiredLength }} character.</p>
+    <p *ngIf="control.errors?.maxlength">{{ label }} must not more than {{ control.errors?.maxlength.requiredLength }}
+        character.</p>
+    <p *ngIf="isExist">User exists with same username.</p>
+    <p *ngIf="inCorrectUser">Incorrect username/email or password.</p>
+    <div *ngIf="control.errors?.pattern" [ngSwitch]="label">
+        <p *ngSwitchCase="'Username'">{{ label }} must have at least 6 character and only contain letter, number and
+            special characters(<i>"_.~!@#$%^&*"</i>).</p>
+        <p *ngSwitchCase="'Password'">{{ label }} must have at least 6 character, 1 uppercase, lowercase, number and
+            special character.</p>
+        <p *ngSwitchCase="'Email'">{{ label }} is invalid.</p>
+    </div>
 </div>

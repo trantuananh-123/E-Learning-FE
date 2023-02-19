@@ -1,10 +1,10 @@
-import { SignupComponent } from './signup/signup.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HomepageComponent } from './components/homepage/homepage.component';
 
 const routes: Routes = [
   {
-    path: 'sign-up', component: SignupComponent
+    path: '', component: HomepageComponent
   }
 ];
 

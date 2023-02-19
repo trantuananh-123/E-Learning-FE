@@ -1,0 +1,80 @@
+<div class="signin-container">
+    <div class="signin-banner">
+        <img src="/assets/img/signin-bg.jpg" alt="Signin Banner">
+    </div>
+    <div class="signin-form">
+        <div class="row">
+            <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9">
+                <img style="width: 200px;" src="/assets/img/logo.svg" alt="Dreams Logo">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <p class="text-center fw-bold fs-2">SIGN IN</p>
+            </div>
+        </div>
+        <form [formGroup]="signinForm">
+            <div class="row form-group">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <label for="username" class="form-control-label fw-light-bold">Username/Email<span
+                            style="color: red;">*</span></label>
+                    <input type="text" class="form-control" placeholder="Enter your username or email"
+                        formControlName="username" maxlength="255">
+                    <app-form-validator [label]="'Username/Email'" [control]="getFormControl('username')"
+                        [submitted]="submitted"></app-form-validator>
+                </div>
+            </div>
+            <div class="row form-group" style="position: relative;">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <label for="username" class="form-control-label fw-light-bold">Password<span
+                            style="color: red;">*</span></label>
+                    <input [type]="isShow ? 'text' : 'password'" class="form-control" placeholder="Enter your password"
+                        formControlName="password" maxlength="255">
+                    <div class="password-eye">
+                        <span class="input-group-text">
+                            <i class="fa" [ngClass]="{
+                            'fa-eye-slash': !isShow,
+                            'fa-eye': isShow
+                        }" (click)="onToggleShowPassword()"></i>
+                        </span>
+                    </div>
+                    <app-form-validator [label]="'Password'" [control]="getFormControl('password')"
+                        [submitted]="submitted"></app-form-validator>
+                </div>
+            </div>
+            <div class="row form-group" style="position: relative;">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <app-form-validator [control]="getFormControl('username')"
+                        [inCorrectUser]="inCorrectUser"></app-form-validator>
+                </div>
+            </div>
+            <!-- <div class="row form-group" style="position: relative;">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="forgot">
+                        <span><a class="forgot-link" href="forgot-password.html">Forgot Password ?</a></span>
+                    </div>
+                    <div class="remember-me">
+                        <label class="custom_check mr-2 mb-0 d-inline-flex remember-me"> Remember me
+                            <input type="checkbox" name="radio">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+            </div> -->
+            <div class="row form-group" style="position: relative;">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-center">
+                    <!-- <div [ngStyle]="{
+                        'cursor': isInvalid ? 'not-allowed' : 'pointer' 
+                    }">
+                        <button class="btn style-btn" type="submit" style="width: 250px;" [ngStyle]="{
+                            'pointer-events': isInvalid ? 'none' : 'auto' 
+                        }" [disabled]="isInvalid" (click)="onSubmit()">Create Account</button>
+                    </div> -->
+                    <button class="btn style-btn" type="submit" style="width: 250px;" (click)="onSubmit()">Sign
+                        In</button>
+                    <button class="btn style-btn" type="submit" style="width: 250px;" (click)="test()">Test</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

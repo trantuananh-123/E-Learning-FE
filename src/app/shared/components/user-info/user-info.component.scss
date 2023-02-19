@@ -1,0 +1,40 @@
+.nav {
+    display        : flex;
+    list-style-type: none;
+    justify-content: flex-end;
+    align-items    : center;
+    padding        : 0;
+    height         : 100%;
+}
+
+.user-img {
+    display : inline-block;
+    position: relative;
+}
+
+.user-img>img {
+    height       : 50px;
+    object-fit   : cover;
+    width        : 50px;
+    border-radius: 50%;
+    border       : 3px solid #E0E0E0;
+}
+
+button:hover::ng-deep .mat-mdc-button-ripple,
+button:active::ng-deep .mat-mdc-button-ripple,
+button:focus::ng-deep .mat-mdc-button-ripple {
+    background-color: white !important;
+}
+
+button {
+    background: none;
+    outline   : none;
+}
+
+button:active {
+    border-style: none;
+}
+
+::ng-deep .cdk-overlay-connected-position-bounding-box {
+    top: 74px !important;
+}

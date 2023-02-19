@@ -1,0 +1,17 @@
+<ul class="nav header-navbar-rht">
+    <li class="nav-item user-nav">
+        <a href="javascript:void(0)" [matMenuTriggerFor]="menu" #menuTrigger="matMenuTrigger"
+            (mouseenter)="open(); isInMenu = true">
+            <span class="user-img">
+                <img src="assets/img/user/user11.jpg" alt="">
+                <span class="status online"></span>
+            </span>
+        </a>
+        <mat-menu #menu="matMenu" [overlapTrigger]="false">
+            <span (mouseenter)="isInMenu = true" (mouseleave)="close(); isInMenu = false">
+                <button mat-menu-item>Item 1</button>
+                <button mat-menu-item>Item 2</button>
+            </span>
+        </mat-menu>
+    </li>
+</ul>

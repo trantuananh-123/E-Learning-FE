@@ -19,13 +19,18 @@ export class FormValidatorComponent implements OnInit, OnChanges {
   control!: FormControl;
 
   @Input()
-  value!: any;
+  isExist!: boolean;
+
+  @Input()
+  inCorrectUser!: boolean;
+
+  @Input()
+  submitted!: boolean;
 
   ngOnInit(): void {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-
   }
 
 }

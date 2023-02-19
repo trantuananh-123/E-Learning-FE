@@ -1,0 +1,38 @@
+::ng-deep .mdc-button__label {
+    font-size  : 14px !important;
+    color      : #F66962;
+    font-weight: 600;
+}
+
+
+::ng-deep .mdc-list-item__primary-text {
+    font-size  : 14px !important;
+    color      : #000000;
+    font-weight: 600;
+}
+
+button {
+    color  : #000000;
+    padding: 0 10px !important;
+}
+
+.style-button {
+    padding: 0 10px !important;
+}
+
+.style-button:hover {
+    background-color: #F66962 !important;
+    border-radius   : 5px !important;
+}
+
+button:hover::ng-deep .mdc-button__label {
+    color: #FFFFFF !important;
+}
+
+::ng-deep .mat-mdc-menu-item {
+    min-height: 36px !important;
+}
+
+i {
+    font-size: 12px !important;
+}

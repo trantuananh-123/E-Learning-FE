@@ -1,31 +1,51 @@
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormValidatorComponent } from './components/form-validator/form-validator.component';
 import { NgSelectModule } from '@ng-select/ng-select';
+import { HeaderComponent } from './components/header/header.component';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MenuDropdownComponent } from './components/menu-dropdown/menu-dropdown.component';
+import { UserInfoComponent } from './components/user-info/user-info.component';
 
 
 const MODULES = [
   FormsModule,
   ReactiveFormsModule,
-  NgSelectModule
+  NgSelectModule,
+  RouterModule
 ];
 
+const MATERIAL_MODULES = [
+  MatMenuModule,
+  MatButtonModule,
+  MatDialogModule,
+]
+
 const COMPONENTS = [
-  FormValidatorComponent
+  FormValidatorComponent,
+  HeaderComponent,
+  MenuDropdownComponent,
+  UserInfoComponent,
 ];
 
 @NgModule({
   declarations: [
-    FormValidatorComponent
+    FormValidatorComponent,
+    ...COMPONENTS,
   ],
   imports: [
     CommonModule,
-    ...MODULES
+    ...MODULES,
+    ...MATERIAL_MODULES,
   ],
   exports: [
     ...MODULES,
-    ...COMPONENTS
+    ...MATERIAL_MODULES,
+    ...COMPONENTS,
   ]
 })
 export class SharedModule { }

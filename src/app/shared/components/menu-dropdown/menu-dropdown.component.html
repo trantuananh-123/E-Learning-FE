@@ -1,0 +1,14 @@
+<button class="style-button" *ngIf="isRootMenu && item.children.length > 0" mat-button
+    [matMenuTriggerFor]="childrenMenu">{{ item.name |
+    uppercase }} <i class="fas fa-chevron-down"></i></button>
+<button *ngIf="!isRootMenu && item.children.length > 0" mat-menu-item [matMenuTriggerFor]="childrenMenu">{{ item.name |
+    uppercase }} </button>
+<button *ngIf="!isRootMenu && item.children.length == 0" mat-menu-item>{{ item.name | uppercase }}</button>
+<button class="style-button" *ngIf="isRootMenu && item.children.length == 0" mat-button>{{ item.name | uppercase }}
+</button>
+<mat-menu #childrenMenu="matMenu" [overlapTrigger]="false">
+    <span *ngFor="let child of item.children">
+        <app-menu-dropdown *ngIf="item.children && item.children.length > 0" [isRootMenu]="false"
+            [item]="child"></app-menu-dropdown>
+    </span>
+</mat-menu>
