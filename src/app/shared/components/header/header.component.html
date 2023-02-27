@@ -2,7 +2,8 @@
     <div class="header-fixed">
         <nav class="navbar navbar-expand-lg header-nav scroll-sticky">
             <div class="row text-center">
-                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3" style="display: flex; justify-content: flex-start;">
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"
+                    style="display: flex; justify-content: flex-start;">
                     <a [routerLink]="'/homepage'" class="logo">
                         <img style="height: 100%;" src="/assets/img/logo.svg" class="img-fluid" alt="Dreams Logo">
                     </a>
@@ -15,7 +16,31 @@
                     </ul>
                 </div>
                 <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
-                    <app-user-info></app-user-info>
+                    <ul class="nav user-profile" style="justify-content: flex-end;">
+                        <li class="nav-item">
+                            <a href="course-message.html">
+                                <img src="/assets/img/icon/messages.svg" alt="img">
+                            </a>
+                        </li>
+                        <li class="nav-item cart-nav">
+                            <a href="#">
+                                <img src="/assets/img/icon/cart.svg" alt="img">
+                            </a>
+                        </li>
+                        <li class="nav-item wish-nav">
+                            <a href="#">
+                                <img src="/assets/img/icon/wish.svg" alt="img">
+                            </a>
+                        </li>
+                        <li class="nav-item noti-nav">
+                            <a href="#">
+                                <img src="/assets/img/icon/notification.svg" alt="img">
+                            </a>
+                        </li>
+                        <li>
+                            <app-user-info></app-user-info>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>

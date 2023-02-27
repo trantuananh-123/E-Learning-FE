@@ -1,0 +1,186 @@
+.mat-mdc-card-header,
+.mat-mdc-menu-item {
+    padding: 0 !important;
+}
+
+.profile {
+    .mat-mdc-card-content {
+        padding: 0 0 16px 0 !important;
+    }
+
+    .user-level {
+        position     : absolute;
+        background   : #FFFFFF;
+        border-radius: 10px;
+        padding      : 3px 10px;
+        color        : #000000;
+        font-size    : 14px;
+        right        : 20px;
+        top          : 20px;
+        margin       : 0;
+    }
+
+    .user-avatar {
+        width            : 150px;
+        height           : 150px;
+        border-radius    : 50%;
+        position         : absolute;
+        bottom           : -60px;
+        left             : 50%;
+        -webkit-transform: translate(-50%, 0);
+        -ms-transform    : translate(-50%, 0);
+        transform        : translate(-50%, 0);
+        border           : 5px solid #FFFFFF;
+    }
+
+    .profile-name {
+        a {
+            font-size    : 24px !important;
+            color        : #22100D;
+            font-weight  : 550;
+            margin-bottom: 5px;
+        }
+
+        a:hover {
+            color: #FF875A;
+        }
+
+        p {
+            color        : #685F78;
+            font-size    : 16px !important;
+            margin-bottom: 20px;
+        }
+
+        .dashboard-btn {
+            background   : #392C7D;
+            border       : 1px solid #392C7D;
+            border-radius: 5px;
+            font-size    : 14px;
+            color        : #fff;
+            padding      : 13px 28px;
+
+            &:hover {
+                opacity: 0.86;
+            }
+        }
+    }
+}
+
+.settings {
+    .mat-mdc-card-content {
+        padding: 0 !important;
+    }
+
+    padding: 15px;
+
+    h3 {
+        font-size  : 24px !important;
+        color      : #392C7D;
+        font-weight: 550;
+        margin     : 5px 0px 20px;
+    }
+
+    ul {
+        list-style-type: none;
+        margin         : 0 !important;
+        padding        : 0 !important;
+
+        li {
+            border-top: 1px solid rgb(199 199 199 / 25%);
+            position  : relative;
+
+            .nav-link {
+                text-decoration: none;
+                transition     : color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+            }
+
+            a {
+                color      : #303030;
+                font-size  : 16px !important;
+                font-weight: 400;
+                border     : 0;
+                align-items: center;
+                line-height: normal;
+                padding    : 20px;
+
+                i {
+                    color       : #FF875A;
+                    margin-right: 15px;
+                    font-size   : 20px !important;
+                }
+            }
+
+            &:hover {
+                color     : #303030;
+                background: rgba(255, 222, 218, 0.25);
+
+                &::before {
+                    content   : "";
+                    position  : absolute;
+                    background: #FF5364;
+                    width     : 2px;
+                    height    : 40px;
+                    left      : 9px;
+                    top       : 11px;
+                    opacity   : 1;
+                    transition: all 0.5s ease;
+                }
+            }
+        }
+
+        .active {
+            background: rgba(255, 222, 218, 0.25);
+
+            &::before {
+                content   : "";
+                position  : absolute;
+                background: #FF5364;
+                width     : 2px;
+                height    : 40px;
+                left      : 9px;
+                top       : 11px;
+                opacity   : 1;
+                transition: all 0.5s ease;
+            }
+        }
+    }
+}
+
+.profile-detail {
+
+    .mat-mdc-card-header,
+    .mat-mdc-card-content {
+        padding: 25px !important;
+    }
+
+    .mat-mdc-card-avatar {
+        width : 100px !important;
+        height: 100px !important;
+    }
+
+    .mat-mdc-card-title {
+        font-size    : 24px !important;
+        font-weight  : 550;
+        color        : #392C7D;
+        margin       : 5px 0px 20px;
+        margin-bottom: 15px;
+        margin-top   : 0;
+    }
+
+    hr {
+        margin: 0;
+    }
+
+    mat-expansion-panel-header {
+        border-bottom: 1px solid #adb5bd;
+        border-radius: 0px;
+    }
+
+    ::ng-deep.mat-expansion-panel-body {
+        padding: 0 !important;
+    }
+
+    .row {
+        padding: 0;
+    }
+}

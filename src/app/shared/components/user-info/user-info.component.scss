@@ -20,21 +20,42 @@
     border       : 3px solid #E0E0E0;
 }
 
-button:hover::ng-deep .mat-mdc-button-ripple,
-button:active::ng-deep .mat-mdc-button-ripple,
-button:focus::ng-deep .mat-mdc-button-ripple {
+button:hover .mat-mdc-button-ripple,
+button:active .mat-mdc-button-ripple,
+button:focus .mat-mdc-button-ripple {
     background-color: white !important;
 }
 
 button {
     background: none;
     outline   : none;
+    border    : none;
 }
 
 button:active {
     border-style: none;
 }
 
-::ng-deep .cdk-overlay-connected-position-bounding-box {
+.cdk-overlay-connected-position-bounding-box {
     top: 74px !important;
+}
+
+::ng-deep.mat-mdc-menu-content {
+    i {
+        color: #FF875A;
+    }
+
+    button:hover ::ng-deep.mdc-list-item__primary-text {
+        color     : #FF875A;
+        transition: ease-in-out 0.2s;
+    }
+
+    button:hover {
+        background-color: #eee;
+        transition: ease-in 0.6;
+    }
+}
+
+.mat-mdc-menu-item {
+    padding: 0 16px !important;
 }

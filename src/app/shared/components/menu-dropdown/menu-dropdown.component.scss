@@ -1,12 +1,12 @@
 ::ng-deep .mdc-button__label {
-    font-size  : 14px !important;
-    color      : #F66962;
-    font-weight: 600;
+    font-size  : 16px !important;
+    color      : #FF875A !important;
+    font-weight: 600 !important;
 }
 
 
 ::ng-deep .mdc-list-item__primary-text {
-    font-size  : 14px !important;
+    font-size  : 16px !important;
     color      : #000000;
     font-weight: 600;
 }
@@ -21,7 +21,7 @@ button {
 }
 
 .style-button:hover {
-    background-color: #F66962 !important;
+    background-color: #FF875A !important;
     border-radius   : 5px !important;
 }
 

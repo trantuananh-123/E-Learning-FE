@@ -37,7 +37,7 @@ a {
 }
 
 a:hover {
-    color: #F66962;
+    color: #FF875A;
 }
 
 a:hover,
@@ -136,4 +136,8 @@ body {
 body {
     margin     : 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+[class*="col-"] {
+    padding: 0 20px !important;
 }

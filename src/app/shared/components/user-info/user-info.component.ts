@@ -16,16 +16,4 @@ export class UserInfoComponent implements OnInit {
   ngOnInit(): void {
 
   }
-
-  open() {
-    this.trigger.openMenu();
-  }
-
-  close() {
-    setTimeout(() => {
-      if (this.isInMenu === false) {
-        this.trigger.closeMenu();
-      }
-    }, 100);
-  }
 }
